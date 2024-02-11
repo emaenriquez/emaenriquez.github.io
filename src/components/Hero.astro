@@ -1,0 +1,52 @@
+---
+import Container from "./Container.astro";
+import CheckVerify from "./icons/CheckVerify.astro";
+import LinkedinIcon from "./icons/Linkedin.astro";
+import MailIcon from "./icons/Mail.astro";
+import ButtonCV from "./ButtonCV.astro";
+import ButtonLink from "./ButtonLink.astro";
+import Divider from "../components/Divider.astro";
+---
+
+<div class="bg-white">
+  <div class="w-full max-w-4xl mx-auto">
+    <img
+      class="w-full h-[380px] object-cover object-center rounded-md mt-10"
+      src="/banner.jpg"
+      alt="Portada de portafolio"
+    />
+  </div>
+  <Container>
+    <div class="flex justify-between items-center w-full h-[110px]">
+      <div class="flex gap-x-3 items-end">
+        <img
+          src="/perfil.jpg"
+          class="h-[170px] w-[170px] rounded-full border-4 border-white
+            -mt-20"
+          alt="Imagen de perfil de portafolio"
+        />
+        <div>
+          <h1 class="text-2xl font-bold flex item-center gap-x-3">
+            <span>Emanuel Enriquez</span>
+            <CheckVerify class="size-5 mt-2 text-[#0966FF]" />
+          </h1>
+          <p class="font-semibold text-slate-600 text-lg">
+            Desarrollador web
+          </p>
+        </div>
+      </div>
+      <div class="flex gap-x-3">
+        <ButtonCV />
+        <ButtonLink enlace="https://www.linkedin.com/in/emaenriquez/">
+          <LinkedinIcon class="size-5" />
+          Linkedin
+        </ButtonLink>
+        <ButtonLink enlace="mailto:emaenriquez1985@gmail.com">
+          <MailIcon class="size-5" />
+          Correo
+        </ButtonLink>
+      </div>
+    </div>
+    <Divider />
+  </Container>
+</div>
