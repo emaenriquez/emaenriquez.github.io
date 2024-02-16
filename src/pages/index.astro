@@ -4,13 +4,16 @@ import Hero from "../components/Hero.astro";
 import Header from "../components/Header.astro";
 import CardDetalle from "../components/CardDetalle.astro";
 import Container from "../components/Container.astro";
-import ExperiencieIcon from "../components/icons/Experiencie.astro";
-import CardContainer from "../components/CardContainer.astro";
+import ProyectoIcon from "../components/icons/Project.astro";
+import CardTitle from "../components/CardTitle.astro";
 import Experiencie from "../components/icons/Experiencie.astro";
 import Experiencies from "../components/Experiencies.astro";
+import Projects from "../components/Projects.astro";
+import AboutMeIcon from "../components/icons/AboutMe.astro";
+import AboutMe from "../components/AboutMe.astro";
 ---
 
-<Layout title="Portafolio de Emanuel enriquez">
+<Layout title="Portafolio de Emanuel Enriquez">
   <Hero />
   <Header />
   <Container>
@@ -19,19 +22,30 @@ import Experiencies from "../components/Experiencies.astro";
         <CardDetalle />
       </div>
       <div class="col-span-6">
-        <CardContainer>
-          <div class="flex items-center gap-x-3">
-            <ExperiencieIcon class="size-6" />
-            <h3 class="text-xl font-bold">Experiencia</h3>
-          </div>
-        </CardContainer>
-        <Experiencies />
+        <section id="experiencia">
+          <!-- <CardTitle titulo="Experiencia">
+            <Experiencie class="size-6" />
+          </CardTitle> -->
+
+          <Experiencies />
+        </section>
+
+        <section id="proyectos">
+          <CardTitle titulo="Proyectos">
+            <ProyectoIcon class="size-6" />
+          </CardTitle>
+
+          <Projects />
+        </section>
+
+        <section id="sobremi">
+          <CardTitle titulo="Sobre mí">
+            <AboutMeIcon class="size-6" />
+          </CardTitle>
+
+          <AboutMe />
+        </section>
       </div>
     </div>
-    <div class="min-h-screen w-full">Aca irá mas información</div>
   </Container>
 </Layout>
-
-<!-- <style>
- 
-</style> -->
